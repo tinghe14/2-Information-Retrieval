@@ -17,4 +17,8 @@ Coding assignments completed In Class:
   - weighted query vectors and corpus vectors using TF-IDF from scratch 
   - caculated cos-similarity score for each document from scratch
   
-
+- [Binary Text Classification](https://github.com/tinghe14/COURSE-2Information-Retrieval/tree/main/4%20Binary%20Text%20Classification)
+  - finished date: Oct 31, 2021
+  - built a binary classifier using the systematic review data
+  - ran experiments with different feature representations: bag-of-word, tf-idf and n-gram
+  - ran multinominal naive bayes model
