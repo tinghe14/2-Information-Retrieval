@@ -22,3 +22,6 @@ Coding assignments completed In Class:
   - built a binary classifier using the systematic review data
   - ran experiments with different feature representations: bag-of-word, tf-idf and n-gram
   - ran multinominal naive bayes model
+
+- [Web Log Analysis](https://github.com/tinghe14/COURSE-2Information-Retrieval/tree/main/5%20Web%20Log%20Analysis)
+  - finished data: Nov 14, 2021
