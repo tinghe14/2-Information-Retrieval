@@ -35,7 +35,30 @@ Document Representations:
   - key data structure: inverted files
     - dictionary with it positing lists which contain a list of documents containing that term and the number of times that term occurs (word A: (doc id A, count A)
     - it is a large binary files, typically 15%-20% the size of the indexed text
-    
+    - after all document have been parsed the inverted file is sorted
+    - multiple terms entries for a single document are merged and frequency information added
+    - the file is commonly split into a dictionary and a posting file
+
+Tokenization
+- difficult to identify & normalize words (eg: 'Dr. Peter')
+- issues:
+  - punctuation
+    - sometimes favor keeping interior punctuation
+  - case
+    - you can reduce to all upper or lower, or preserve first character (fails on McNamee) 
+  - numbers
+    - throw away or retain some
+      - usefull: air florida #90, 1/20/2009, gateway 2000
+  - abbreviations
+    - I.B.M or IBM
+    - keep a list and pick canonical form 
+  - contractions and possessives 所有格
+    - remove suffix (don't -> do and n't)
+    - expand (don't -> do not)
+    - leave interior quote marks alone
+  - other steps
+    - stopword removal
+    - simple normalization of word forms: stemming
 Module 2: Index Construction
 ---
 Module 3: Efficiency Issues
