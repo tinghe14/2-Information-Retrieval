@@ -3,6 +3,14 @@ Book Source: Available at http://nlp.stanford.edu/IR-book/information-retrieval-
 
 Module 1: Boolean Retrieval
 ---
+Information Retrieval:
+- field concerned with the organization, storage, and retrieval of information for text, semistructured data(xml), video images and speech
+
+Three major problems in IR:
+- polysemy: words can have multiple meanings
+- synonymy: the same concept can be expressed using different words
+- morphology: many word forms are related and small affixed adjust meaning
+
 Module 2: Index Construction
 ---
 Module 3: Efficiency Issues
