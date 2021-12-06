@@ -1,5 +1,19 @@
 # COURSE-2Information-Retrieval
 
+This course aims to teach us:
+- basic theoretical understanding of IR
+  - representing and indexing text documents
+  - retrieval models
+  - implementing querying efficiently
+- application areas and research topics such as:
+  - text classification
+  - cross-language retrieval
+  - retrieval on the web
+  - speech retrieval
+- assess IR performance
+- gain hands-on experience building an IR system
+
+## Assignment
 My Python Code for 2021 Spring Information Retrieval Course and [study notes](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Study%20Note.md) for better understand the material and build knowledge graph.
 
 Coding assignments completed In Class:
