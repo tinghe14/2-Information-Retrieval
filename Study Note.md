@@ -8,9 +8,34 @@ Information Retrieval:
 
 Three major problems in IR:
 - polysemy: words can have multiple meanings
+  - ambiguity pervasive
+  - distrinctions vary in granularity
 - synonymy: the same concept can be expressed using different words
+  - English provides no canonical典范的 way to reference people and things
+  - speackers of a language learn preferential ways of expressing things
 - morphology: many word forms are related and small affixed adjust meaning
+  - we like to use a query using the word 'airplane' to mnatch the concept but it won't cover the same meaning words, 'aircraft, planes'.
 
+Boolean Model:
+- relevant documents are determined using set operations/set-membership (eg, query = 'rabies AND shot')
+  - boolean AND
+  - pros:
+    - good performance with well-constructred queries
+    - representation is space-compact
+    - bit-operations are efficient
+    - results are transparent
+  - cons:
+    - if a document contains words more than once, it doesn't matter
+    - if a document contains many other words besides the query terms, the model ignores this
+    - scores are 0/1 (specificity is low)
+    - long queries are hard to construct
+
+Document Representations:
+- term-document matrix
+  - key data structure: inverted files
+    - dictionary with it positing lists which contain a list of documents containing that term and the number of times that term occurs (word A: (doc id A, count A)
+    - it is a large binary files, typically 15%-20% the size of the indexed text
+    
 Module 2: Index Construction
 ---
 Module 3: Efficiency Issues
