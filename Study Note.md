@@ -59,8 +59,52 @@ Tokenization
   - other steps
     - stopword removal
     - simple normalization of word forms: stemming
+    
 Module 2: Index Construction
 ---
+Terminiology
+- indexing term (the sub-atomic particles of documents. In practice, terms are essentially words. however, it can bt stemmed words, multi-word phrases or other strings)
+- vocabulary size (the number of unique indexing terms, also called dictionary size)
+- corpus (alternative term for document colleciton)
+- DOCID (id for each document)
+- document frequency (df(term))
+- collrection frequency / corpus frequncy (cf(term))
+- term count or term frequency (tf(term, docid) for a particular document, the num of times that a given term appears in it)
+- dictionary (generally the dictionary is a list of words, their document frequency and a pointer to a postings list)
+- posting or postings entry (a tuple that indicates how many times a term apppears in a document such as (doc5, 3))
+- inverted file / inverted index (a set of postings lists for terms)
+Tokenizaiton
+- stopwords
+- stemming: transforming related word forms into a common representation, usually by identifying a root form or stem
+Tolerant Retrieval
+- background
+  - indexing terms from documents may not match user query terms, two common reasons
+    - lexical variation (building, builder, buildings)
+    - misspelling
+- wildcard queries
+  - mon*: find all docs containing any word begining 'mon'
+  - easy with binary tree or B-tree lexicon
+  - here we have an enumeration of all terms in the dictionary that match the wild-card query
+- spelling correction
+  - two main flavors: isolated word (check each word on its own for misspelling)
+    - isolated word correction: get a lexicon and a character sequence Q, return the words in the lexicon cloest to Q
+      - closes: edit distance(S1,S2, the minimum number of basic operations to convert one to other-insert, delete, replace), weighted edit distance(as before, but the weight of an operation depends on the characters involved), n-gram overlap(enumerate all the n-grams in the query string, threshold by number of matching n-grams)
+        - Jaccard coefficient (commonly used measure of overlap)
+        - dice coefficient
+  - context-sensitive (look at surrounding words)
+    - examination of co-occurrence patterns can help from spelling correction
+    - soundex: class of heuristics to expand a query into phonetic equivalents
+word-based information retrieval
+- most traditional information retrieval systems indexed documents according to the words in those documents
+- word-based retrieval performs poory when the documents to be retrieved are garbled乱码 or contain spelling mistakes
+- character n-gram tokenizaiton can help
+  - represent text as overlapping substrings
+Index Construction
+- basic dictionary representations
+- indexing methods
+  - indexing methods
+  - dynamic indexes
+  -
 Module 3: Efficiency Issues
 ---
 Module 4: Vector Space Modules
