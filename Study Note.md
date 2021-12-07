@@ -100,14 +100,28 @@ word-based information retrieval
 - character n-gram tokenizaiton can help
   - represent text as overlapping substrings
 Index Construction
+- minimal memory
+  - front-coding (and arrays or B-trees)
+  - perfect hash functions
 - basic dictionary representations
+  - space requirement
+    - the space required for the vocabulary is rather small. Heaps' law the vocabulary v, grows as O(t^beta)
+    - the occurrences (inverted file) demand much more space. since each word appearing in the text is referenced once in that structure, the space is O(t)
 - indexing methods
   - indexing methods
   - dynamic indexes
-  -
+  
 Module 3: Efficiency Issues
 ---
-Module 4: Vector Space Modules
+Zipf's law
+- the kth most frequent term has frequency proportional to 1/k
+index compressions
+- an index requires less pace than a text
+- compression method
+  - encoding numbers in binary
+  - unary coding, etc
+
+Module 4: Vector Space Models
 ---
 Module 5: Evaluation & Relevance Feedback
 ---
