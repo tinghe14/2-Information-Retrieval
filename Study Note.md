@@ -209,15 +209,24 @@ statistical language model
           - queries: binary term incidence vector
           - ![BIM](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/Binary%20Independence%20M.png)
           - ![BIM2](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/Binary%20Independence%20Final%20Model.png)
-- statistical language model
+- statistical language model (what comes next? shut? up? the door?)
   - n-gram language models (n-grams: a sequence of n words (commonly words, not characters))
     - chain rule
       - counting fails
         - this approach doesn;t generalize
           - longer n-grams are likely to be rate and estimates will have higher variance
           - some n-grams will never be seen in training data, we don't want to fail due to these zero counts
-          - solution: markov models
-          -
+          - solution: markov models (sequence of random variables)
+            - unigram model (based solely on current word) bigram model(based on pervious word and current word) trigram model (based on prior 2 words and current word)
+            - data sparsity (non seen text)
+              - add-one/ laplace
+              - backoff model
+              - other complex alternatives (good-turing, witten-bell, knesar-ney)
+           - ![language model](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/language%20models.png)
+           - insufficient data
+             - a simple idea that works well in practice is to use a mixture between document multinomial and collection distribution
+             - ![mixture model](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/Mixture%20model.png) 
+             - ![summary](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/basic%20mixture%20model%20summary.png)
 Module 7: Text Classification
 ---
 Chapter 13 - Text Classification & Naïve Bayes
