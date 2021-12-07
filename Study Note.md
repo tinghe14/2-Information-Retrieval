@@ -188,6 +188,36 @@ query refinement
 
 Module 6: Advanced Retrieval Model
 ---
+historic probabilistic model
+- rigorous formal model attempts to predict the probability that given a document will be relevant to a given query (probability ranking principle, accurate estimates of probabilities)
+probabilistic model
+- angle between two vectors (how empirical)
+- formulation biased towards an interactive process
+  - initally posit a set of candidate documents
+  - the user will rate initial documents
+  - now the system can make a better guess
+- probabilistic framework
+  - compute odds of relevance for a document
+  - binary weights are used
+  - in practice, no human feedback is required
+    - basic idea
+      - for a given query, if we know some documents that are relevant, terms that occur in those documents should be given greater weighting in searching for other relevant documents/ by making assumptions about the distribution of terms and applying Bayes Theorem, it is possible to derive weights theoretically.
+statistical language model
+      - binary independence model (most simplest)
+        - binary = boolean: documents are represented as binary incidence vector of terms
+        - indepence: terms occur in documents independently 
+          - queries: binary term incidence vector
+          - ![BIM](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/Binary%20Independence%20M.png)
+          - ![BIM2](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/Binary%20Independence%20Final%20Model.png)
+- statistical language model
+  - n-gram language models (n-grams: a sequence of n words (commonly words, not characters))
+    - chain rule
+      - counting fails
+        - this approach doesn;t generalize
+          - longer n-grams are likely to be rate and estimates will have higher variance
+          - some n-grams will never be seen in training data, we don't want to fail due to these zero counts
+          - solution: markov models
+          -
 Module 7: Text Classification
 ---
 Chapter 13 - Text Classification & Naïve Bayes
