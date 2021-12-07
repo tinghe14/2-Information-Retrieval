@@ -123,6 +123,35 @@ index compressions
 
 Module 4: Vector Space Models
 ---
+relevance
+- goal of IR is to retrieve all and only the relevant documents in a collection for a particular user with a particular need for information
+  - only documents that share features with the query are relebant (we speak generally of indexing terms)
+    - using term frequency
+      - repitiion can be rewarded
+      - better documents have amore features in common with the query
+      - and if a document and the query share no words in common, the document is not relevant
+        - inverse document frequency
+          - ![IDF](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/IDF.png)
+vector-space model
+- binary weights are too limitng, use term frequency
+- documents and queries are n-dimensional vectors
+- documents are ranked against queriese using a vector comparision
+  - sample metrics: cosine (most common), inner product, dice
+  - cosine
+    - ![Cos similarity](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/Cos%20Similarity.png)
+    - vector representation of query and colelction
+    - inner product
+    - vector length
+    - vector cosine
+      - problem
+        - term independence: different terms are considered independent/ orthogonal
+        - equal importance: like boolean models, the naive VSM treats all words as equally important
+          - term weights (most two factors)
+            - repitition (term frequency)
+            - rarity (schemes like IDF reward rareness; but they do not depend on given document)
+            - TF-IDF
+            - ![tf-idf](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/TF-IDF.png)
+
 Module 5: Evaluation & Relevance Feedback
 ---
 Module 6: Advanced Retrieval Model
