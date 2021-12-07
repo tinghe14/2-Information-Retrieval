@@ -154,6 +154,38 @@ vector-space model
 
 Module 5: Evaluation & Relevance Feedback
 ---
+evaluation of IR performance
+- relevance
+  - in what ways can a document be relevant to a query
+    - answer question precisely or partically
+    - sugeest a source for more information
+    - give background information
+    - remind the user of other knowledge
+  - degree of relevance
+    - binary: relevant or not
+    - on a scale: 0-100
+  - evaluation metrics
+    - precision/recall
+      - can't know true recall value except in small collections
+    - another way to evaluate
+      - fix the number of documents retrieved at several levels: top 5, top 10, top 20
+        - this is a way to focus on how well the system ranks the first k documents
+    - there is a tradeoff between precision and recall
+      - so measure precision at different levels of recall
+        - interpolate
+        - ![interpolate1](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/Interpolate1.png)
+        - ![interpolate2](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/Interpolate2.png)
+        - ![interpolate3](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/Interpolate3.png)
+        - average over multiple queries
+query refinement
+- how to reformulate the query?
+  - thesaurus expansion: suggest terms similar to query terms (see car add automobile)
+    - instructor note: thesaurus-based query expansion is best with controlled vocabulary search
+  - relevance feedback: suggest terms and documents similar to retrieveed documents that have been judged by a user to be relevant
+    - rocchio's method
+      - ![rocchio](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/Rocchio's%20method.png)
+  - term re-weighting
+
 Module 6: Advanced Retrieval Model
 ---
 Module 7: Text Classification
