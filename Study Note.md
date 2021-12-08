@@ -227,6 +227,13 @@ statistical language model
              - a simple idea that works well in practice is to use a mixture between document multinomial and collection distribution
              - ![mixture model](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/Mixture%20model.png) 
              - ![summary](https://github.com/tinghe14/COURSE-2Information-Retrieval/blob/main/Pics%20in%20Note/basic%20mixture%20model%20summary.png)
+two additional models
+- cover density ranking
+  - key ideas:documents that process most of the query terms, together in close proximity(接近),are likely to be relevant; documents with many such spans are more likely to be relevant
+  - requires a different kinds of inverted file: word positions must be stored for each word occurrence and suited for short queries (4 words or fewer) 
+- logistic regression
+  - estimates for relevance based on log-linear model with various statistical measures of document content as independent variables.
+
 Module 7: Text Classification
 ---
 Chapter 13 - Text Classification & Naïve Bayes
@@ -245,6 +252,7 @@ Chapter 13 - Text Classification & Naïve Bayes
 
 Chapter 14 - Vector Space Classification
 Chapter 15 - Support Vector Machines & Machine Learning on Documents
+
 Module 8: Multilingual IR
 ---
 Module 9: Web Search Part 1
