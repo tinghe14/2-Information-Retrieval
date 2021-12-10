@@ -252,6 +252,11 @@ Chapter 13 - Text Classification & Naïve Bayes
 
 Chapter 14 - Vector Space Classification
 Chapter 15 - Support Vector Machines & Machine Learning on Documents
+Text classification overview
+- problem: in ad hoc retrieval a static collection of documents is searched and a ranked list of documents is returned. what happens when not all the documents are avaiable ahead of time? don't have global IDF statistics and not possible to give total rankings. what happens if you have standing queries? always want new documents if relevant and generally have to make instant decisions
+Supervised Methods:
+Other filtering tasks
+Case study
 
 Module 8: Multilingual IR
 ---
