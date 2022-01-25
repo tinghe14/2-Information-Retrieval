@@ -260,6 +260,46 @@ Case study
 
 Module 8: Multilingual IR
 ---
+cross-language information retrieval(CLIR)
+multilingual overview:
+- foundamental:
+  - translate documents or queries
+  - translation ambiguity
+  - query expansion
+  - poor translation resource
+- realted work:
+  - out-of-vocabulary(OOV):
+    - ignore, spell correct or guess
+    - search the web
+    - transliterate直译 foreign words
+    - learn rules to map suffixes and compare words with small n-grams
+  - morphological variation 形态变异
+    - monolingual search: use a stemmer
+    - bilingual search: perform stemming on dictionaries/corpora
+    - n-grams are a surrogate way of normalizing 替代
+- character n-gram tokenization
+  - represent text as overlapping substrings
+    - advantages: simple, address morpholopgy, surrogate for short phrases, robust against spelling & diacritical errors, language independent
+    - disadvantages: conflation合并(ismmer,polymers),n-grams can incur both speed and disk usage penalties
+  - claim:
+    - character n-grams should be the default text representation for IR
+    - n-grams are superior to alternatives when
+      - IR: many languages are of interest
+        - morphology is complex
+      - CLIR: OOV terms are comon
+        - translation resources are scarce
+CLIR
+- most researchers just translate queries since it is easy (query or documents)
+- how to translate:
+  - machine translation software: systran
+  - multilingual dictionaries
+    - unclear how to pick the right words from possible translations
+  - statistical (corpus-based) translation
+    - aligned parallel corpora are rare/expensive
+    - translation results may be biased by domain of source text
+- query translation approaches
+
+
 Module 9: Web Search Part 1
 ---
 Module 10: Web Search Part 2
