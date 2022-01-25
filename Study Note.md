@@ -302,6 +302,39 @@ CLIR
 
 Module 9: Web Search Part 1
 ---
+overview of the web
+- challanges
+  - distributed data: milions of servers, billions of pages
+  - volatility and scale: page will change, growth exponentially
+  - lack of structure: duplication, naming issue (URL names are ugly and difficult to canonicalize)
+  - quality
+ 
+search on the web graph
+- ranking ideas for web
+  - exploit linkes: possibly words near a hyperlink are more important
+  - currency: assumes most recent data is best
+  - popularity: use estimates of what a large number of people think about a page or a site
+  - authority: harder to estimate than popularity
+- authority:
+  - google's measure: PageRank
+    - it simulats a user browsing the web
+      - the user either jumps to a random page with probability q or follows a random hyperlink on the current page with probability 1-q
+      - this process can be modeled as Markov chain
+
+web users
+- no-IR information: instead of ranking, use a reference desk
+
+learning to rank
+- background:
+  - supervised ML has been used for text classification: marking documents as relevant ot not relevant to a fixed query
+    - not generally used for ranked retrieval: because the num of queries is potentially infinite, and training data isn't available
+  - general approaches
+    - regression:
+      - for a given User x Query x Page estimate what rank a page should have
+    - pairwise preference:
+      - simply decided is Page A better or worse than Page B
+    - list ordering
+      - learning what properties make a good 'list'
 Module 10: Web Search Part 2
 ---
 Module 11: Distrbuted Processing & Multimedia Processing
